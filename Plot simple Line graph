@@ -1,0 +1,30 @@
+#2 dotted line graphs
+import math
+import matplotlib.pyplot as plt
+import pandas as pd
+
+a = [1,2,3,4,5,6,7,8,9,10]
+b = [i**2 for i in a]
+c = [i**3 for i in a]
+
+plt.plot(a,c, color = 'b', marker = '.', linestyle = '')
+plt.plot(a,b, color = 'g', marker = '.', linestyle = '')
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Quadratic Curve')
+plt.show()
+
+_______________________________________________________________________________
+
+# dotted line graphs
+import pandas as pd
+lst = pd.DataFrame({'a':a, 'b':b})
+lst.plot.scatter(x='a',y='b')
+plt.show()
+
+_______________________________________________________________________________
+
+# line graph
+plt.plot(a,b)
+plt.show()
